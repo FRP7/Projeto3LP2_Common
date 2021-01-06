@@ -27,9 +27,9 @@ namespace Common
         public GameState()
         {
             IsGameOver = false;
-            gameObject[0] = new BlackPiece();
+            /*gameObject[0] = new BlackPiece();
             gameObject[1] = new WhitePiece();
-            gameObject[2] = new Board();
+            gameObject[2] = new Board();*/
         }
     }
 }
