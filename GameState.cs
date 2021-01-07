@@ -12,31 +12,36 @@ namespace Common
         /// </summary>
         public bool IsGameOver { get; private set; }
 
+        private Board board;
+
+        public Slots[] GetSlots { get; }
+
         /// <summary>
         /// Indicar qual a cor que o jogador escolheu.
         /// </summary>
-        public Colors playerColor { get; set; }
+        public Colors PlayerColor { get; set; }
 
         public void Start()
         {
             IsGameOver = false;
 
+            PlayerColor = Colors.White;
+
             // Registar a cor que o jogador escolheu.
-            ServiceLocator.Register<Colors>(playerColor);
+            ServiceLocator.Register<Colors>(PlayerColor);
+
+            board.Start();
         }
 
         public void Update()
         {
         }
 
-        public void Render()
-        {
-          
-        }
-
         public GameState()
         {
-           
+            IsGameOver = false;
+            board = new Board();
+            GetSlots = board.GetSlots;
         }
     }
 }
