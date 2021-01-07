@@ -5,7 +5,7 @@ namespace Common
     /// <summary>
     /// Board GameObject.
     /// </summary>
-    class Board : GameObject
+    public class Board : GameObject
     {
         public override void Start()
         {

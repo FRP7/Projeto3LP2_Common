@@ -5,7 +5,7 @@ namespace Common
     /// <summary>
     /// White piece gameobject.
     /// </summary>
-    class WhitePiece : GameObject
+    public class WhitePiece : GameObject
     {
         public override void Start()
         {

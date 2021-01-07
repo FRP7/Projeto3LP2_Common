@@ -5,7 +5,7 @@ namespace Common
     /// <summary>
     /// Black piece gameobject.
     /// </summary>
-    class BlackPiece : GameObject
+    public class BlackPiece : GameObject
     {
         public override void Start()
         {
