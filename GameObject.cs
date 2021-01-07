@@ -9,5 +9,6 @@ namespace Common
     {
         public abstract void Start();
         public abstract void Update();
+        public abstract void Render();
     }
 }

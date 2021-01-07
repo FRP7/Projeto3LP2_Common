@@ -16,5 +16,10 @@ namespace Common
         {
 
         }
+
+        public override void Render()
+        {
+
+        }
     }
 }

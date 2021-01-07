@@ -50,6 +50,21 @@ namespace Common
             board.Update();
         }
 
+        public void Render()
+        {
+            foreach (GameObject item in blackPieces)
+            {
+                item.Render();
+            }
+
+            foreach (GameObject item in whitePieces)
+            {
+                item.Render();
+            }
+
+            board.Render();
+        }
+
         public GameState()
         {
             blackPieces = new GameObject[6];
