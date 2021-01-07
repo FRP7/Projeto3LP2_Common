@@ -5,19 +5,19 @@ namespace Common
     /// <summary>
     /// Board GameObject.
     /// </summary>
-    public class Board : GameObject
+    public class Board 
     {
-        public override void Start()
+        public void Start()
         {
 
         }
 
-        public override void Update()
+        public void Update()
         {
 
         }
 
-        public override void Render()
+        public void Render()
         {
 
         }
