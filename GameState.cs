@@ -10,7 +10,7 @@ namespace Common
         /// <summary>
         /// Array de GameObjects.
         /// </summary>
-        public GameObject[] gameObject;
+        public readonly GameObject[] gameObject;
 
         /// <summary>
         /// Indicar se o jogo acabou.
@@ -19,10 +19,6 @@ namespace Common
 
         public void Start()
         {
-            gameObject = new GameObject[3];
-            gameObject[0] = new BlackPiece();
-            gameObject[1] = new WhitePiece();
-            gameObject[2] = new Board();
             IsGameOver = false;
             gameObject[0].Start();
             gameObject[1].Start();
@@ -34,6 +30,14 @@ namespace Common
             gameObject[2].Update();
             gameObject[1].Update();
             gameObject[0].Update();
+        }
+
+        public GameState()
+        {
+            gameObject = new GameObject[3];
+            gameObject[0] = new BlackPiece();
+            gameObject[1] = new WhitePiece();
+            gameObject[2] = new Board();
         }
     }
 }
