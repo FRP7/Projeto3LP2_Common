@@ -18,35 +18,37 @@ namespace Common
         /// </summary>
         public bool IsGameOver { get; private set; }
 
+        /// <summary>
+        /// Indicar qual a cor que o jogador escolheu.
+        /// </summary>
+        public Colors playerColor { get; set; }
+
         public void Start()
         {
             IsGameOver = false;
 
+            // Registar a cor que o jogador escolheu.
+            ServiceLocator.Register<Colors>(playerColor);
+
+            // Start das peças pretas.
             foreach(GameObject item in blackPieces)
             {
                 item.Start();
             }
 
+            // Start das peças brancas.
             foreach (GameObject item in whitePieces)
             {
                 item.Start();
             }
 
+            // Start do tabuleiro.
             board.Start();
         }
 
         public void Update()
         {
-            foreach (GameObject item in blackPieces)
-            {
-                item.Update();
-            }
-
-            foreach (GameObject item in whitePieces)
-            {
-                item.Update();
-            }
-
+            // Pensar numa maneira de o jogador controlar as peças de cor x
             board.Update();
         }
 
