@@ -21,7 +21,9 @@ namespace Common
 
         public void Update()
         {
-
+            // Verificar quais são as jogadas legais todos os turnos.
+            /*Plano: verificar todas as slots a volta de cada uma pa ver que
+             * tipo são (jogador ou ai ou nada*/
         }
 
         private void SetPieces()

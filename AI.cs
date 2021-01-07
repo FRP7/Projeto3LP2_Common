@@ -7,5 +7,9 @@ namespace Common
     /// </summary>
     class AI
     {
+        public void AITurn()
+        {
+            
+        }
     }
 }

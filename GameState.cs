@@ -35,6 +35,16 @@ namespace Common
 
         public void Update()
         {
+            board.Update();
+            AITurn();
+            board.Update();
+        }
+
+        private void AITurn()
+        {
+            AI ai = new AI();
+            ai.AITurn();
+            // mover as cenas
         }
 
         public GameState()
