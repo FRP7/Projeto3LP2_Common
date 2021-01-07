@@ -7,10 +7,11 @@ namespace Common
     /// </summary>
     class GameState
     {
-        /// <summary>
-        /// Array de GameObjects.
-        /// </summary>
-        public readonly GameObject[] gameObject;
+        public readonly GameObject[] blackPieces;
+
+        public readonly GameObject[] whitePieces;
+
+        public readonly GameObject board;
 
         /// <summary>
         /// Indicar se o jogo acabou.
@@ -20,36 +21,54 @@ namespace Common
         public void Start()
         {
             IsGameOver = false;
-            foreach(GameObject item in gameObject)
+
+            foreach(GameObject item in blackPieces)
             {
                 item.Start();
             }
+
+            foreach (GameObject item in whitePieces)
+            {
+                item.Start();
+            }
+
+            board.Start();
         }
 
         public void Update()
         {
-            foreach (GameObject item in gameObject)
+            foreach (GameObject item in blackPieces)
             {
                 item.Update();
             }
+
+            foreach (GameObject item in whitePieces)
+            {
+                item.Update();
+            }
+
+            board.Update();
         }
 
         public GameState()
         {
-            gameObject = new GameObject[13];
-            gameObject[0] = new BlackPiece();
-            gameObject[1] = new BlackPiece();
-            gameObject[2] = new BlackPiece();
-            gameObject[3] = new BlackPiece();
-            gameObject[4] = new BlackPiece();
-            gameObject[5] = new BlackPiece();
-            gameObject[6] = new WhitePiece();
-            gameObject[7] = new WhitePiece();
-            gameObject[8] = new WhitePiece();
-            gameObject[9] = new WhitePiece();
-            gameObject[10] = new WhitePiece();
-            gameObject[11] = new WhitePiece();
-            gameObject[12] = new Board();
+            blackPieces = new GameObject[6];
+            blackPieces[0] = new BlackPiece();
+            blackPieces[1] = new BlackPiece();
+            blackPieces[2] = new BlackPiece();
+            blackPieces[3] = new BlackPiece();
+            blackPieces[4] = new BlackPiece();
+            blackPieces[5] = new BlackPiece();
+
+            whitePieces = new GameObject[6];
+            whitePieces[0] = new WhitePiece();
+            whitePieces[1] = new WhitePiece();
+            whitePieces[2] = new WhitePiece();
+            whitePieces[3] = new WhitePiece();
+            whitePieces[4] = new WhitePiece();
+            whitePieces[5] = new WhitePiece();
+
+            board = new Board();
         }
     }
 }
