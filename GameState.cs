@@ -10,7 +10,7 @@ namespace Common
         /// <summary>
         /// Array de GameObjects.
         /// </summary>
-        public readonly GameObject[] gameObject;
+        public GameObject[] gameObject;
 
         /// <summary>
         /// Indicar se o jogo acabou.
@@ -19,6 +19,7 @@ namespace Common
 
         public void Start()
         {
+            gameObject = new GameObject[3];
             gameObject[0] = new BlackPiece();
             gameObject[1] = new WhitePiece();
             gameObject[2] = new Board();
