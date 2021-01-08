@@ -5,7 +5,7 @@ namespace Common
     /// <summary>
     /// Classe onde a lógica do jogo acontece (update). 
     /// </summary>
-    class GameState
+    public class GameState
     {
         /// <summary>
         /// Indicar se o jogo acabou.
@@ -38,6 +38,11 @@ namespace Common
             board.Update();
             AITurn();
             board.Update();
+        }
+
+        public void PlayerTurn(int x, int y)
+        {
+
         }
 
         private void AITurn()
