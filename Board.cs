@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine; // testar
 
 namespace Common
 {
@@ -17,6 +18,11 @@ namespace Common
         public void Start()
         {
             SetColor();
+        }
+
+        public void Update()
+        {
+            Debug.Log("Tabuleiro atualizado.");
         }
 
         private void SetColor()
