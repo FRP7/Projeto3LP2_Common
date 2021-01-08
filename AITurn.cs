@@ -2,7 +2,7 @@
 
 namespace Common
 {
-    public class PlayerTurn
+    public class AITurn
     {
     }
 }

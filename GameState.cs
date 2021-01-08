@@ -2,56 +2,44 @@
 
 namespace Common
 {
-    /// <summary>
-    /// Classe onde a lógica do jogo acontece (update). 
-    /// </summary>
     public class GameState
     {
-        /// <summary>
-        /// Indicar se o jogo acabou.
-        /// </summary>
-        public bool IsGameOver { get; private set; }
+        private SlotTypes playerType;
+        public SlotTypes GetPlayerType => playerType;
 
-        private Board board;
-
-        public Slots[] GetSlots { get; }
-
-        /// <summary>
-        /// Indicar qual a cor que o jogador escolheu.
-        /// </summary>
-        public Colors PlayerColor { get; set; }
+        private SlotTypes[] getSlotTypes;
+        public SlotTypes[] GetSlotTypes => getSlotTypes;
 
         public void Start()
         {
-            IsGameOver = false;
-
-            PlayerColor = Colors.White;
-
-            // Registar a cor que o jogador escolheu.
-            ServiceLocator.Register<Colors>(PlayerColor);
-
-            board.Start();
+            SetColor();
         }
 
         public void Update()
         {
-            board.Update();
-            AITurn();
-            board.Update();
+
         }
 
-        private void AITurn()
+        private void SetColor()
         {
-            AI ai = new AI();
-            ai.AITurn();
-            // mover as cenas
-        }
+            // Escolher a cor do jogador.
+            playerType = SlotTypes.Black;
+            getSlotTypes = new SlotTypes[13];
+            
+            // Colocar as peças do jogador pretas.
+            for(int i = 0; i < 6; i++)
+            {
+                getSlotTypes[i] = SlotTypes.Black;
+            }
 
-        public GameState()
-        {
-            IsGameOver = false;
-            board = new Board();
-            GetSlots = board.GetSlots;
+            // Colocar as peças da ai pretas.
+            for (int i = 6; i < 11; i++)
+            {
+                getSlotTypes[i] = SlotTypes.White;
+            }
+
+            // Colocar as peças vazias cizentas.
+            getSlotTypes[12] = SlotTypes.Grey;
         }
     }
 }
