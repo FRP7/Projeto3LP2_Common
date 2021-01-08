@@ -7,15 +7,20 @@ namespace Common
 {
     public class GameState
     {
-        private Board board;
+        public Board board;
         private AITurn aiTurn;
-        private PlayerTurn playerTurn;
 
         // Cor do jogador.
-        public SlotTypes PlayerType { get => board.PlayerType; set => board.PlayerType = value; }
+        public SlotTypes PlayerType { 
+            get => board.PlayerType; 
+            set => board.PlayerType = value; }
 
         // Cores das peças.
-        public SlotTypes[] GetSlotTypes { get => board.GetSlotTypes; set => board.GetSlotTypes = value; }
+        public SlotTypes[] GetSlotTypes {
+            get => board.GetSlotTypes; 
+            set => board.GetSlotTypes = value; }
+
+        public bool IsPlayerFirst { get; set; }
 
         // Delegate do gameloop.
         public delegate void GameLoop();
@@ -27,14 +32,15 @@ namespace Common
             // Inicializar o tabileiro.
             board.Start();
 
+            GlobalLoop();
             // Ver quem começa primeiro.
             if(WhoStartsFirst())
             {
-                PlayerFirst();
+                IsPlayerFirst = true;
             }
             else
             {
-                AIFirst();
+                IsPlayerFirst = false;
             }
         }
 
@@ -60,19 +66,9 @@ namespace Common
             }
         }
 
-        // Definir o gameloop caso a AI comece primeiro.
-        private void AIFirst()
+        // Loop que vai sempre acontecer seja quem for o primeiro a jogar.
+        public void GlobalLoop()
         {
-            gameLoop += aiTurn.AIPlay;
-            gameLoop += board.Update;
-            gameLoop += playerTurn.PlayerPlay;
-            gameLoop += board.Update;
-        }
-
-        // Definir o gameloop caso o jogador comece primeiro.
-        private void PlayerFirst()
-        {
-            gameLoop += playerTurn.PlayerPlay;
             gameLoop += board.Update;
             gameLoop += aiTurn.AIPlay;
             gameLoop += board.Update;
@@ -82,7 +78,6 @@ namespace Common
         {
             board = new Board();
             aiTurn = new AITurn();
-            playerTurn = new PlayerTurn();
         }
     }
 }
