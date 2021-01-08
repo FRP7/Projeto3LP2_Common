@@ -40,11 +40,6 @@ namespace Common
             board.Update();
         }
 
-        public void PlayerTurn(int x, int y)
-        {
-
-        }
-
         private void AITurn()
         {
             AI ai = new AI();
