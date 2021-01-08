@@ -4,13 +4,14 @@ namespace Common
 {
     public class Board
     {
-        private SlotTypes playerType;
+        public SlotTypes PlayerType { get; set; }
 
         private SlotTypes[] getSlotTypes;
 
-        public SlotTypes[] GetSlotTypes { 
-            get => getSlotTypes; 
-            set => getSlotTypes = value; 
+        public SlotTypes[] GetSlotTypes
+        {
+            get => getSlotTypes;
+            set => getSlotTypes = value;
         }
 
         public void Start()
@@ -20,20 +21,36 @@ namespace Common
 
         private void SetColor()
         {
-            // Escolher a cor do jogador.
-            playerType = SlotTypes.Black;
             getSlotTypes = new SlotTypes[13];
 
-            // Colocar as peças do jogador pretas.
-            for (int i = 0; i < 6; i++)
+            if (PlayerType == SlotTypes.Black)
             {
-                getSlotTypes[i] = SlotTypes.Black;
-            }
+                // Colocar as peças do jogador .
+                for (int i = 0; i < 6; i++)
+                {
+                    getSlotTypes[i] = SlotTypes.Black;
+                }
 
-            // Colocar as peças da ai pretas.
-            for (int i = 6; i < 11; i++)
+                // Colocar as peças da ai .
+                for (int i = 6; i < 12; i++)
+                {
+                    getSlotTypes[i] = SlotTypes.White;
+                }
+
+            }
+            else if (PlayerType == SlotTypes.White)
             {
-                getSlotTypes[i] = SlotTypes.White;
+                // Colocar as peças do jogador .
+                for (int i = 0; i < 6; i++)
+                {
+                    getSlotTypes[i] = SlotTypes.White;
+                }
+
+                // Colocar as peças da ai .
+                for (int i = 6; i < 12; i++)
+                {
+                    getSlotTypes[i] = SlotTypes.Black;
+                }
             }
 
             // Colocar as peças vazias cizentas.

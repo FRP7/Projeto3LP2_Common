@@ -6,6 +6,8 @@ namespace Common
     {
         private Board board;
 
+        public SlotTypes PlayerType { get => board.PlayerType; set => board.PlayerType = value; }
+
         public SlotTypes[] GetSlotTypes { get => board.GetSlotTypes; set => board.GetSlotTypes = value; }
 
         public void Start()
