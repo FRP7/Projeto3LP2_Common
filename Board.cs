@@ -60,6 +60,9 @@ namespace Common
 
             // Colocar as peças vazias cizentas.
             AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.None, SlotColors.Grey));
+
+            // registar
+            ServiceLocator.Register<List<Tuple<SlotTypes, SlotColors>>>(AllSlots);
         }
 
         public Board()
