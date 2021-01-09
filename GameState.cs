@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Random = System.Random; // testar
 using UnityEngine; // testar
 using URand = UnityEngine.Random; // testar
@@ -15,10 +16,29 @@ namespace Common
             get => board.PlayerType; 
             set => board.PlayerType = value; }
 
-        // Cores das peças.
-        public SlotTypes[] GetSlotTypes {
-            get => board.GetSlotTypes; 
-            set => board.GetSlotTypes = value; }
+        // Peças do jogador.
+        public ICollection<SlotTypes> GetPlayerPieces
+        {
+            get => board.PlayerPieces;
+        }
+
+        // Peças da AI.
+        public ICollection<SlotTypes> GetAIPieces
+        {
+            get => board.AIPieces;
+        }
+
+        // No Pieces.
+        public ICollection<SlotTypes> GetNoPieces
+        {
+            get => board.NoPieces;
+        }
+
+        // Coleção de jogadas possíveis para o jogador.
+        public ICollection<SlotTypes> PlayerLegalPlays { get; private set; }
+
+        // Coleção de jogadas possíveis para a AI.
+        public ICollection<SlotTypes> AILegalPlays { get; private set; }
 
         public bool IsPlayerFirst { get; set; }
 
@@ -70,14 +90,28 @@ namespace Common
         public void GlobalLoop()
         {
             gameLoop += board.Update;
+            gameLoop += CheckAILegalPlays;
             gameLoop += aiTurn.AIPlay;
             gameLoop += board.Update;
+            gameLoop += CheckPlayerLegalPlays;
+        }
+
+        private void CheckPlayerLegalPlays()
+        {
+            Debug.Log("Verificar jogadas possíveis do jogador");
+        }
+
+        private void CheckAILegalPlays()
+        {
+            Debug.Log("Verificar jogadas possíveis da Ai");
         }
 
         public GameState()
         {
             board = new Board();
             aiTurn = new AITurn();
+            PlayerLegalPlays = new List<SlotTypes>();
+            AILegalPlays = new List<SlotTypes>();
         }
     }
 }
