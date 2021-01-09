@@ -34,6 +34,13 @@ namespace Common
             get => board.NoPieces;
         }
 
+        // Todas as peças.
+        public ICollection<Tuple<string, SlotTypes>> AllSlots
+        {
+            get => board.AllSlots;
+            set => board.AllSlots = value;
+        }
+
         // Coleção de jogadas possíveis para o jogador.
         public ICollection<SlotTypes> PlayerLegalPlays { get; private set; }
 

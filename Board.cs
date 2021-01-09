@@ -14,6 +14,8 @@ namespace Common
 
         public ICollection<SlotTypes> NoPieces { get; set; }
 
+        public ICollection<Tuple<string, SlotTypes>> AllSlots { get; set; }
+
         public void Start()
         {
             SetColor();
@@ -76,12 +78,14 @@ namespace Common
                 for (int i = 0; i < 6; i++)
                 {
                     PlayerPieces.Add(SlotTypes.Black);
+                    AllSlots.Add(new Tuple<string, SlotTypes>("Player", SlotTypes.Black));
                 }
 
                 // Colocar as peças da ai .
                 for (int i = 6; i < 12; i++)
                 {
                     AIPieces.Add(SlotTypes.White);
+                    AllSlots.Add(new Tuple<string, SlotTypes>("AI", SlotTypes.White));
                 }
 
             }
@@ -91,17 +95,20 @@ namespace Common
                 for (int i = 0; i < 6; i++)
                 {
                     PlayerPieces.Add(SlotTypes.White);
+                    AllSlots.Add(new Tuple<string, SlotTypes>("Player", SlotTypes.White));
                 }
 
                 // Colocar as peças da ai .
                 for (int i = 6; i < 12; i++)
                 {
                     AIPieces.Add(SlotTypes.Black);
+                    AllSlots.Add(new Tuple<string, SlotTypes>("AI", SlotTypes.Black));
                 }
             }
 
             // Colocar as peças vazias cizentas.
             NoPieces.Add(SlotTypes.Grey);
+            AllSlots.Add(new Tuple<string, SlotTypes>("Empty", SlotTypes.Grey));
         }
 
         public Board()
@@ -109,6 +116,7 @@ namespace Common
             PlayerPieces = new List<SlotTypes>();
             AIPieces = new List<SlotTypes>();
             NoPieces = new List<SlotTypes>();
+            AllSlots = new List<Tuple<string, SlotTypes>>();
         }
     }
 }
