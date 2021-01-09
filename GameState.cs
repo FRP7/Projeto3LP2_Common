@@ -12,30 +12,15 @@ namespace Common
         private AITurn aiTurn;
 
         // Cor do jogador.
-        public SlotTypes PlayerType { 
-            get => board.PlayerType; 
-            set => board.PlayerType = value; }
-
-        // Peças do jogador.
-        public ICollection<SlotTypes> GetPlayerPieces
+        public SlotColors PlayerType
         {
-            get => board.PlayerPieces;
+            get => board.PlayerType;
+            set => board.PlayerType = value;
         }
 
-        // Peças da AI.
-        public ICollection<SlotTypes> GetAIPieces
-        {
-            get => board.AIPieces;
-        }
-
-        // No Pieces.
-        public ICollection<SlotTypes> GetNoPieces
-        {
-            get => board.NoPieces;
-        }
 
         // Todas as peças.
-        public ICollection<Tuple<string, SlotTypes>> AllSlots
+        public List<Tuple<SlotTypes, SlotColors>> AllSlots
         {
             get => board.AllSlots;
             set => board.AllSlots = value;
@@ -61,7 +46,7 @@ namespace Common
 
             GlobalLoop();
             // Ver quem começa primeiro.
-            if(WhoStartsFirst())
+            if (WhoStartsFirst())
             {
                 IsPlayerFirst = true;
             }
@@ -81,7 +66,7 @@ namespace Common
         {
             Random random = new Random();
 
-            if(random.Next(0, 2) == 1)
+            if (random.Next(0, 2) == 1)
             {
                 Debug.Log("Jogador começa primeiro.");
                 return true;
@@ -106,6 +91,7 @@ namespace Common
         private void CheckPlayerLegalPlays()
         {
             Debug.Log("Verificar jogadas possíveis do jogador");
+            // slot 0
         }
 
         private void CheckAILegalPlays()
