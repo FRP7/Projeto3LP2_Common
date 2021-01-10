@@ -25,7 +25,7 @@ namespace Common
             //get => board.AllSlots;
             get => ServiceLocator.GetService<List<Tuple<SlotTypes, SlotColors>>>();
             //set => board.AllSlots = value;
-            //set => ServiceLocator.GetService<List<Tuple<SlotTypes, SlotColors>>>();
+            set => ServiceLocator.GetService<List<Tuple<SlotTypes, SlotColors>>>();
         }
 
         // Coleção de jogadas possíveis para o jogador.

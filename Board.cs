@@ -22,7 +22,7 @@ namespace Common
 
         public void UpdateColors()
         {
-
+            SetColor();
         }
 
         private void SetColor()
