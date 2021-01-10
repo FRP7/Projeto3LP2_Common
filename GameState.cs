@@ -25,14 +25,14 @@ namespace Common
             //get => board.AllSlots;
             get => ServiceLocator.GetService<List<Tuple<SlotTypes, SlotColors>>>();
             //set => board.AllSlots = value;
-            set => ServiceLocator.GetService<List<Tuple<SlotTypes, SlotColors>>>();
+            //set => ServiceLocator.GetService<List<Tuple<SlotTypes, SlotColors>>>();
         }
 
         // Coleção de jogadas possíveis para o jogador.
-        public static List<Tuple<SlotTypes, SlotColors>> PlayerLegalPlays { get; private set; }
+        public List<Tuple<SlotTypes, SlotColors>> PlayerLegalPlays { get; private set; }
 
         // Coleção de jogadas possíveis para a AI.
-        public static List<Tuple<SlotTypes, SlotColors>> AILegalPlays { get; private set; }
+        public List<Tuple<SlotTypes, SlotColors>> AILegalPlays { get; private set; }
 
         public bool IsPlayerFirst { get; set; }
 
@@ -93,6 +93,12 @@ namespace Common
         {
             Debug.Log("Verificar jogadas possíveis do jogador");
 
+            // testar
+            /*foreach(var item in AllSlots)
+            {
+                Debug.Log($"Type: {item.Item1}. Color: {item.Item2}");
+            }*/
+
             bool isLegal = true;
 
             // verificar peça 0
@@ -124,7 +130,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 0 não é do jogador");
                 }
             }
 
@@ -139,7 +144,7 @@ namespace Common
                     {
                         PlayerLegalPlays.Add(AllSlots[6]);
                     }
-                    if (AllSlots[4].Item1 == SlotTypes.None)
+                    if (AllSlots[4].Item1 == SlotTypes.Player)
                     {
                         PlayerLegalPlays.Add(AllSlots[4]);
                     }
@@ -156,7 +161,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 1 não é do jogador");
                 }
             }
 
@@ -594,6 +598,12 @@ namespace Common
             }
 
             Debug.Log("Jogada legal");
+
+            // testar
+            /*foreach(var item in PlayerLegalPlays)
+            {
+                Debug.Log($"Type: {item.Item1}. Color: {item.Item2}");
+            }*/
 
             return isLegal;
         }

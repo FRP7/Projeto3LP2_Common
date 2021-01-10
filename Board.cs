@@ -36,8 +36,11 @@ namespace Common
                     AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.Player, SlotColors.Black));
                 }
 
+                // Colocar as peças vazias cizentas.
+                AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.None, SlotColors.Grey));
+
                 // Colocar as peças da ai .
-                for (int i = 6; i < 12; i++)
+                for (int i = 7; i < 12; i++)
                 {
                     AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.AI, SlotColors.White));
                 }
@@ -51,15 +54,15 @@ namespace Common
                     AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.Player, SlotColors.White));
                 }
 
+                // Colocar as peças vazias cizentas.
+                AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.None, SlotColors.Grey));
+
                 // Colocar as peças da ai .
-                for (int i = 6; i < 12; i++)
+                for (int i = 7; i < 12; i++)
                 {
                     AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.AI, SlotColors.Black));
                 }
             }
-
-            // Colocar as peças vazias cizentas.
-            AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.None, SlotColors.Grey));
 
             // registar
             ServiceLocator.Register<List<Tuple<SlotTypes, SlotColors>>>(AllSlots);
