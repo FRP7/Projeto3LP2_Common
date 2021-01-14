@@ -39,7 +39,7 @@ namespace Common
                 AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.None, SlotColors.Grey));
 
                 // Colocar as peças da ai .
-                for (int i = 7; i < 12; i++)
+                for (int i = 7; i < 13; i++)
                 {
                     AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.AI, SlotColors.White));
                 }
@@ -57,7 +57,7 @@ namespace Common
                 AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.None, SlotColors.Grey));
 
                 // Colocar as peças da ai .
-                for (int i = 7; i < 12; i++)
+                for (int i = 7; i < 13; i++)
                 {
                     AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.AI, SlotColors.Black));
                 }

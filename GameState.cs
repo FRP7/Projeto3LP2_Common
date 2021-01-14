@@ -98,6 +98,8 @@ namespace Common
             {
                 Debug.Log($"Type: {item.Item1}. Color: {item.Item2}");
             }*/
+            //Debug.Log($"Conteúdo da slot: {AllSlots[piece].Item1.ToString()}");
+            //Debug.Log("Tamanho da lista: " + AllSlots.Count);
 
             bool isLegal = true;
 
@@ -337,6 +339,8 @@ namespace Common
             // verificar a peça 6
             if (piece == 6)
             {
+                //Debug.Log("Tamanho da lista: " + AllSlots.Count);
+                //Debug.Log($"Conteúdo da slot: {AllSlots[piece].Item1.ToString()}");
                 if (AllSlots[6].Item1 == SlotTypes.Player)
                 {
                     // guardar as slots legais
