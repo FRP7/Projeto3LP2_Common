@@ -358,6 +358,7 @@ namespace Common
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[1].Item1, AllSlots[1].Item2));
                     }
 
+                    // o bug deve estar aqui
                     if (AllSlots[4].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[4]);
@@ -415,7 +416,6 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[9]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[9].Item1, AllSlots[9].Item2));
                     }
-
                     isLegal = true;
                 }
                 else // a peça não é do jogador
