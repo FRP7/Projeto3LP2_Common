@@ -11,6 +11,8 @@ namespace Common
         public Board board;
         private AITurn aiTurn;
 
+        private bool isEaten;
+
         // Cor do jogador.
         public SlotColors PlayerType
         {
@@ -677,7 +679,7 @@ namespace Common
             }*/
 
             // registar as jogadas.
-            ServiceLocator.Register<List<Tuple<int, SlotTypes, SlotColors>>>(PlayerLegalPlays);
+            ServiceLocator.Register<List<Tuple<int, SlotTypes, SlotColors, bool>>>(PlayerLegalPlays);
 
             return isLegal;
         }
@@ -685,12 +687,18 @@ namespace Common
         public bool CheckIfLegal(int piece, int slot)
         {
             bool isTrue = false;
+            isEaten = false;
+
             foreach(Tuple<int, SlotTypes, SlotColors, bool> item in PlayerLegalPlays)
             {
                 // comparar a piece com a slot?
                 if(slot == item.Item1)
                 {
                     isTrue = true;
+                    if(item.Item4)
+                    {
+                        isEaten = true;
+                    }
                     Debug.Log("A jogada é legal");
                 }
                 else
@@ -712,6 +720,12 @@ namespace Common
                 AllSlots[slot] = Tuple.Create(SlotTypes.Player, SlotColors.Black);
                 Debug.Log("Atualizar peças.");
             }
+            // caso coma alguma peça (not sure se funciona ainda)
+            if(isEaten)
+            {
+                AllSlots[piece + 1] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            // acontece independente
             AllSlots[piece] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
 
             PlayerLegalPlays.Clear();
