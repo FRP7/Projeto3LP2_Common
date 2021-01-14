@@ -111,23 +111,23 @@ namespace Common
                         && AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(0, AllSlots[6].Item1, AllSlots[6].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[6].Item1, AllSlots[6].Item2));
                     }
                     if (AllSlots[5].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[5]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(0, AllSlots[5].Item1, AllSlots[5].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(5, AllSlots[5].Item1, AllSlots[5].Item2));
                     }
                     if (AllSlots[1].Item1 == SlotTypes.AI
                         && AllSlots[2].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[2]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(0, AllSlots[2].Item1, AllSlots[2].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(2, AllSlots[2].Item1, AllSlots[2].Item2));
                     }
                     if (AllSlots[1].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[1]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(0, AllSlots[1].Item1, AllSlots[1].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(1, AllSlots[1].Item1, AllSlots[1].Item2));
                     }
                     isLegal = true;
                 }
@@ -147,22 +147,22 @@ namespace Common
                         && AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(1, AllSlots[6].Item1, AllSlots[6].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[6].Item1, AllSlots[6].Item2));
                     }
                     if (AllSlots[4].Item1 == SlotTypes.Player)
                     {
                         //PlayerLegalPlays.Add(AllSlots[4]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(1, AllSlots[6].Item1, AllSlots[6].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(4, AllSlots[6].Item1, AllSlots[6].Item2));
                     }
                     if (AllSlots[0].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[0]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(1, AllSlots[0].Item1, AllSlots[0].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(0, AllSlots[0].Item1, AllSlots[0].Item2));
                     }
                     if (AllSlots[2].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[2]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(1, AllSlots[2].Item1, AllSlots[2].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(2, AllSlots[2].Item1, AllSlots[2].Item2));
                     }
                     isLegal = true;
                 }
@@ -182,23 +182,23 @@ namespace Common
                         && AllSlots[0].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[0]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(2, AllSlots[0].Item1, AllSlots[0].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(0, AllSlots[0].Item1, AllSlots[0].Item2));
                     }
                     if (AllSlots[1].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[1]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(2, AllSlots[1].Item1, AllSlots[1].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(1, AllSlots[1].Item1, AllSlots[1].Item2));
                     }
                     if (AllSlots[3].Item1 == SlotTypes.AI &&
                         AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(2, AllSlots[6].Item1, AllSlots[6].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[6].Item1, AllSlots[6].Item2));
                     }
                     if (AllSlots[3].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[3]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(2, AllSlots[3].Item1, AllSlots[3].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(3, AllSlots[3].Item1, AllSlots[3].Item2));
                     }
                     isLegal = true;
                 }
@@ -219,28 +219,28 @@ namespace Common
                         && AllSlots[9].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[9]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(3, AllSlots[9].Item1, AllSlots[9].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(9, AllSlots[9].Item1, AllSlots[9].Item2));
                     }
                     if (AllSlots[2].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[2]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(3, AllSlots[2].Item1, AllSlots[2].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(2, AllSlots[2].Item1, AllSlots[2].Item2));
                     }
                     if (AllSlots[4].Item1 == SlotTypes.AI &&
                         AllSlots[5].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[5]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(3, AllSlots[5].Item1, AllSlots[5].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(5, AllSlots[5].Item1, AllSlots[5].Item2));
                     }
                     if (AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(3, AllSlots[6].Item1, AllSlots[6].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[6].Item1, AllSlots[6].Item2));
                     }
                     if (AllSlots[4].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[4]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(3, AllSlots[4].Item1, AllSlots[4].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(4, AllSlots[4].Item1, AllSlots[4].Item2));
                     }
                     isLegal = true;
                 }
@@ -261,27 +261,27 @@ namespace Common
                         && AllSlots[8].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[8]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(4, AllSlots[8].Item1, AllSlots[8].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(8, AllSlots[8].Item1, AllSlots[8].Item2));
                     }
                     if (AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(4, AllSlots[6].Item1, AllSlots[6].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[6].Item1, AllSlots[6].Item2));
                     }
                     if (AllSlots[5].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[5]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(4, AllSlots[5].Item1, AllSlots[5].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(5, AllSlots[5].Item1, AllSlots[5].Item2));
                     }
                     if (AllSlots[3].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[3]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(4, AllSlots[3].Item1, AllSlots[3].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(3, AllSlots[3].Item1, AllSlots[3].Item2));
                     }
                     if (AllSlots[1].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[1]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(4, AllSlots[1].Item1, AllSlots[1].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(1, AllSlots[1].Item1, AllSlots[1].Item2));
                     }
                     isLegal = true;
                 }
@@ -302,28 +302,28 @@ namespace Common
                         && AllSlots[7].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[7]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(5, AllSlots[7].Item1, AllSlots[7].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(7, AllSlots[7].Item1, AllSlots[7].Item2));
                     }
                     if (AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(5, AllSlots[6].Item1, AllSlots[6].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[6].Item1, AllSlots[6].Item2));
                     }
                     if (AllSlots[4].Item1 == SlotTypes.AI
                        && AllSlots[3].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[3]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(5, AllSlots[3].Item1, AllSlots[3].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(3, AllSlots[3].Item1, AllSlots[3].Item2));
                     }
                     if (AllSlots[4].Item1 == SlotTypes.None)
                     {
                         // PlayerLegalPlays.Add(AllSlots[4]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(5, AllSlots[4].Item1, AllSlots[4].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(4, AllSlots[4].Item1, AllSlots[4].Item2));
                     }
                     if (AllSlots[0].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[0]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(5, AllSlots[0].Item1, AllSlots[0].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(0, AllSlots[0].Item1, AllSlots[0].Item2));
                     }
                     isLegal = true;
                 }
@@ -344,77 +344,77 @@ namespace Common
                         && AllSlots[0].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[0]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[0].Item1, AllSlots[0].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(0, AllSlots[0].Item1, AllSlots[0].Item2));
                     }
                     if (AllSlots[5].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[5]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[5].Item1, AllSlots[5].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(5, AllSlots[5].Item1, AllSlots[5].Item2));
                     }
                     if (AllSlots[4].Item1 == SlotTypes.AI
                        && AllSlots[1].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[1]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[1].Item1, AllSlots[1].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(1, AllSlots[1].Item1, AllSlots[1].Item2));
                     }
 
                     // o bug deve estar aqui
                     if (AllSlots[4].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[4]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[4].Item1, AllSlots[4].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(4, AllSlots[4].Item1, AllSlots[4].Item2));
                     }
 
                     if (AllSlots[3].Item1 == SlotTypes.AI
                        && AllSlots[2].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[2]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[2].Item1, AllSlots[2].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(2, AllSlots[2].Item1, AllSlots[2].Item2));
                     }
 
                     if (AllSlots[3].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[3]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[3].Item1, AllSlots[3].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(3, AllSlots[3].Item1, AllSlots[3].Item2));
                     }
 
                     if (AllSlots[7].Item1 == SlotTypes.AI
                        && AllSlots[12].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[12]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[12].Item1, AllSlots[12].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(12, AllSlots[12].Item1, AllSlots[12].Item2));
                     }
 
                     if (AllSlots[7].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[7]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[7].Item1, AllSlots[7].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(7, AllSlots[7].Item1, AllSlots[7].Item2));
                     }
 
                     if (AllSlots[8].Item1 == SlotTypes.AI
                        && AllSlots[11].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[11]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[11].Item1, AllSlots[11].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(11, AllSlots[11].Item1, AllSlots[11].Item2));
                     }
 
                     if (AllSlots[8].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[8]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[8].Item1, AllSlots[8].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(8, AllSlots[8].Item1, AllSlots[8].Item2));
                     }
 
                     if (AllSlots[9].Item1 == SlotTypes.AI
                        && AllSlots[10].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[10]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[10].Item1, AllSlots[10].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(10, AllSlots[10].Item1, AllSlots[10].Item2));
                     }
 
                     if (AllSlots[9].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[9]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[9].Item1, AllSlots[9].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(9, AllSlots[9].Item1, AllSlots[9].Item2));
                     }
                     isLegal = true;
                 }
@@ -434,29 +434,29 @@ namespace Common
                     if (AllSlots[12].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[12]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(7, AllSlots[12].Item1, AllSlots[12].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(12, AllSlots[12].Item1, AllSlots[12].Item2));
                     }
                     if (AllSlots[8].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[8]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(7, AllSlots[8].Item1, AllSlots[8].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(8, AllSlots[8].Item1, AllSlots[8].Item2));
                     }
                     if (AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(7, AllSlots[6].Item1, AllSlots[6].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[6].Item1, AllSlots[6].Item2));
                     }
                     if (AllSlots[6].Item1 == SlotTypes.AI
                         && AllSlots[5].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[5]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(7, AllSlots[5].Item1, AllSlots[5].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(5, AllSlots[5].Item1, AllSlots[5].Item2));
                     }
                     if (AllSlots[8].Item1 == SlotTypes.AI
                        && AllSlots[9].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[9]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(7, AllSlots[9].Item1, AllSlots[9].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(9, AllSlots[9].Item1, AllSlots[9].Item2));
                     }
                     isLegal = true;
                 }
@@ -476,28 +476,28 @@ namespace Common
                     if (AllSlots[9].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[9]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(8, AllSlots[9].Item1, AllSlots[9].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(9, AllSlots[9].Item1, AllSlots[9].Item2));
                     }
                     if (AllSlots[11].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[11]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(8, AllSlots[11].Item1, AllSlots[1].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(11, AllSlots[11].Item1, AllSlots[1].Item2));
                     }
                     if (AllSlots[7].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[7]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(8, AllSlots[7].Item1, AllSlots[7].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(7, AllSlots[7].Item1, AllSlots[7].Item2));
                     }
                     if (AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(8, AllSlots[6].Item1, AllSlots[6].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[6].Item1, AllSlots[6].Item2));
                     }
                     if (AllSlots[6].Item1 == SlotTypes.AI
                        && AllSlots[4].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[4]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(8, AllSlots[4].Item1, AllSlots[4].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(4, AllSlots[4].Item1, AllSlots[4].Item2));
                     }
                     isLegal = true;
                 }
@@ -517,29 +517,29 @@ namespace Common
                     if (AllSlots[8].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[8]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(9, AllSlots[8].Item1, AllSlots[8].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(8, AllSlots[8].Item1, AllSlots[8].Item2));
                     }
                     if (AllSlots[10].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[10]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(9, AllSlots[10].Item1, AllSlots[10].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(10, AllSlots[10].Item1, AllSlots[10].Item2));
                     }
                     if (AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(9, AllSlots[6].Item1, AllSlots[6].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[6].Item1, AllSlots[6].Item2));
                     }
                     if (AllSlots[8].Item1 == SlotTypes.AI
                        && AllSlots[7].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[7]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(9, AllSlots[7].Item1, AllSlots[7].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(7, AllSlots[7].Item1, AllSlots[7].Item2));
                     }
                     if (AllSlots[6].Item1 == SlotTypes.AI
                      && AllSlots[3].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[3]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(9, AllSlots[3].Item1, AllSlots[3].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(3, AllSlots[3].Item1, AllSlots[3].Item2));
                     }
                     isLegal = true;
                 }
@@ -559,24 +559,24 @@ namespace Common
                     if (AllSlots[9].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[9]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(10, AllSlots[9].Item1, AllSlots[9].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(9, AllSlots[9].Item1, AllSlots[9].Item2));
                     }
                     if (AllSlots[11].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[11]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(10, AllSlots[11].Item1, AllSlots[11].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(11, AllSlots[11].Item1, AllSlots[11].Item2));
                     }
                     if (AllSlots[11].Item1 == SlotTypes.AI
                        && AllSlots[12].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[12]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(10, AllSlots[12].Item1, AllSlots[12].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(12, AllSlots[12].Item1, AllSlots[12].Item2));
                     }
                     if (AllSlots[9].Item1 == SlotTypes.AI
                      && AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(10, AllSlots[6].Item1, AllSlots[6].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[6].Item1, AllSlots[6].Item2));
                     }
                     isLegal = true;
                 }
@@ -596,7 +596,7 @@ namespace Common
                     if (AllSlots[10].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[9]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(11, AllSlots[10].Item1, AllSlots[10].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(9, AllSlots[10].Item1, AllSlots[10].Item2));
                     }
                     if (AllSlots[12].Item1 == SlotTypes.None)
                     {
@@ -612,7 +612,7 @@ namespace Common
                        && AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(11, AllSlots[6].Item1, AllSlots[6].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[6].Item1, AllSlots[6].Item2));
                     }
                 }
                 else // a peça não é do jogador
@@ -631,24 +631,24 @@ namespace Common
                     if (AllSlots[11].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[9]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(12, AllSlots[9].Item1, AllSlots[9].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(9, AllSlots[9].Item1, AllSlots[9].Item2));
                     }
                     if (AllSlots[7].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[11]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(12, AllSlots[11].Item1, AllSlots[11].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(11, AllSlots[11].Item1, AllSlots[11].Item2));
                     }
                     if (AllSlots[7].Item1 == SlotTypes.AI
                        && AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(12, AllSlots[6].Item1, AllSlots[6].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(6, AllSlots[6].Item1, AllSlots[6].Item2));
                     }
                     if (AllSlots[11].Item1 == SlotTypes.AI
                      && AllSlots[10].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[10]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(12, AllSlots[10].Item1, AllSlots[10].Item2));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors>(10, AllSlots[10].Item1, AllSlots[10].Item2));
                     }
                     isLegal = true;
                 }
@@ -675,6 +675,25 @@ namespace Common
             ServiceLocator.Register<List<Tuple<int, SlotTypes, SlotColors>>>(PlayerLegalPlays);
 
             return isLegal;
+        }
+
+        public bool CheckIfLegal(int piece, int slot)
+        {
+            bool isTrue = false;
+            foreach(Tuple<int, SlotTypes, SlotColors> item in PlayerLegalPlays)
+            {
+                // comparar a piece com a slot?
+                if(slot == item.Item1)
+                {
+                    isTrue = true;
+                    Debug.Log("A jogada é legal");
+                }
+                else
+                {
+                    Debug.Log("A jogada é ilegal");
+                }            
+            }
+            return isTrue;
         }
 
         private void CheckAILegalPlays()
