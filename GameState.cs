@@ -704,6 +704,7 @@ namespace Common
             AllSlots[piece] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
 
             PlayerLegalPlays.Clear();
+            //ServiceLocator.GetService<List<Tuple<SlotTypes, SlotColors>>>().Clear();
         }
 
         public bool CheckOpponentLegalPlays(int piece)
@@ -1301,7 +1302,8 @@ namespace Common
             // acontece independente
             AllSlots[piece] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
 
-            PlayerLegalPlays.Clear();
+              PlayerLegalPlays.Clear();
+            //ServiceLocator.GetService<List<Tuple<SlotTypes, SlotColors>>>().Clear();
         }
 
         public GameState()
