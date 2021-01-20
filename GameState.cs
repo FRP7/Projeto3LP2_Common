@@ -179,7 +179,7 @@ namespace Common
                         AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(6, AllSlots[6].Item1, AllSlots[6].Item2, false));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(6, AllSlots[6].Item1, AllSlots[6].Item2, true));
                     }
                     if (AllSlots[3].Item1 == SlotTypes.None)
                     {
@@ -589,12 +589,12 @@ namespace Common
                     if (AllSlots[12].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[11]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(11, AllSlots[11].Item1, AllSlots[11].Item2, false));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(11, AllSlots[12].Item1, AllSlots[11].Item2, false));
                     }
                     if (AllSlots[8].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[11]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(11, AllSlots[11].Item1, AllSlots[11].Item2, false));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(11, AllSlots[8].Item1, AllSlots[11].Item2, false));
                     }
                     if (AllSlots[8].Item1 == SlotTypes.AI
                        && AllSlots[6].Item1 == SlotTypes.None)
@@ -698,7 +698,8 @@ namespace Common
             // caso coma alguma peça (not sure se funciona ainda)
             if(isEaten)
             {
-                AllSlots[piece + 1] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+                //AllSlots[piece + 1] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+                EatPiece(piece, slot);
             }
             // acontece independente
             AllSlots[piece] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
@@ -734,7 +735,7 @@ namespace Common
                         && AllSlots[2].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[2]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(2, AllSlots[2].Item1, AllSlots[2].Item2, false));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(2, AllSlots[2].Item1, AllSlots[2].Item2, true));
                     }
                     if (AllSlots[1].Item1 == SlotTypes.None)
                     {
@@ -761,7 +762,7 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[6]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(6, AllSlots[6].Item1, AllSlots[6].Item2, true));
                     }
-                    if (AllSlots[4].Item1 == SlotTypes.AI)
+                    if (AllSlots[4].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[4]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(4, AllSlots[6].Item1, AllSlots[6].Item2, false));
@@ -805,7 +806,7 @@ namespace Common
                         AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(6, AllSlots[6].Item1, AllSlots[6].Item2, false));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(6, AllSlots[6].Item1, AllSlots[6].Item2, true));
                     }
                     if (AllSlots[3].Item1 == SlotTypes.None)
                     {
@@ -1213,12 +1214,12 @@ namespace Common
                     if (AllSlots[12].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[11]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(11, AllSlots[11].Item1, AllSlots[11].Item2, false));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(12, AllSlots[11].Item1, AllSlots[11].Item2, false));
                     }
                     if (AllSlots[8].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[11]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(11, AllSlots[11].Item1, AllSlots[11].Item2, false));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(8, AllSlots[11].Item1, AllSlots[11].Item2, false));
                     }
                     if (AllSlots[8].Item1 == SlotTypes.Player
                        && AllSlots[6].Item1 == SlotTypes.None)
@@ -1248,7 +1249,7 @@ namespace Common
                     if (AllSlots[7].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[11]);
-                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(11, AllSlots[11].Item1, AllSlots[11].Item2, false));
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(7, AllSlots[11].Item1, AllSlots[11].Item2, false));
                     }
                     if (AllSlots[7].Item1 == SlotTypes.Player
                        && AllSlots[6].Item1 == SlotTypes.None)
@@ -1297,13 +1298,118 @@ namespace Common
             // caso coma alguma peça (not sure se funciona ainda)
             if (isEaten)
             {
-                AllSlots[piece + 1] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+                //AllSlots[piece + 1] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+                EatPiece(piece, slot);
             }
             // acontece independente
             AllSlots[piece] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
 
               PlayerLegalPlays.Clear();
             //ServiceLocator.GetService<List<Tuple<SlotTypes, SlotColors>>>().Clear();
+        }
+
+        private void EatPiece(int piece, int slot)
+        {
+            if(piece == 1 && slot == 6)
+            {
+                AllSlots[4] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 2 && slot == 0)
+            {
+                AllSlots[1] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 2 && slot == 6)
+            {
+                AllSlots[3] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 3 && slot == 9)
+            {
+                AllSlots[6] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 3 && slot == 5)
+            {
+                AllSlots[4] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 4 && slot == 8)
+            {
+                AllSlots[6] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 5 && slot == 7)
+            {
+                AllSlots[6] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 5 && slot == 3)
+            {
+                AllSlots[4] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 6 && slot == 0)
+            {
+                AllSlots[5] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 6 && slot == 1)
+            {
+                AllSlots[4] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 6 && slot == 2)
+            {
+                AllSlots[3] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 6 && slot == 10)
+            {
+                AllSlots[9] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 6 && slot == 12)
+            {
+                AllSlots[7] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 6 && slot == 11)
+            {
+                AllSlots[8] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 6 && slot == 10)
+            {
+                AllSlots[6] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 7 && slot == 5)
+            {
+                AllSlots[6] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 7 && slot == 9)
+            {
+                AllSlots[8] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 8 && slot == 4)
+            {
+                AllSlots[6] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 9 && slot == 7)
+            {
+                AllSlots[8] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 9 && slot == 3)
+            {
+                AllSlots[6] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 10 && slot == 12)
+            {
+                AllSlots[11] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 10 && slot == 6)
+            {
+                AllSlots[9] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 11 && slot == 6)
+            {
+                AllSlots[8] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 12 && slot == 6)
+            {
+                AllSlots[7] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 12 && slot == 10)
+            {
+                AllSlots[11] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
         }
 
         public GameState()
