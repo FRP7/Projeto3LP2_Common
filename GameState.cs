@@ -38,6 +38,10 @@ namespace Common
 
         public bool IsPlayerFirst { get; set; }
 
+        public bool HasPlayerWon { get; set; }
+
+        public bool HasOpponentWon { get; set; }
+
         // Delegate do gameloop.
         public delegate void GameLoop();
 
@@ -1310,7 +1314,11 @@ namespace Common
 
         private void EatPiece(int piece, int slot)
         {
-            if(piece == 1 && slot == 6)
+            if (piece == 0 && slot == 6)
+            {
+                AllSlots[5] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+            else if (piece == 1 && slot == 6)
             {
                 AllSlots[4] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
             }
@@ -1409,6 +1417,41 @@ namespace Common
             else if (piece == 12 && slot == 10)
             {
                 AllSlots[11] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
+        }
+
+        public Victory CheckWin()
+        {
+            int countPlayer = 0;
+            int countOpponent = 0;
+
+            foreach (Tuple<SlotTypes, SlotColors> items in AllSlots)
+            {
+                if(items.Item1 == SlotTypes.Player)
+                {
+                    countPlayer++;
+
+                } else if(items.Item1 == SlotTypes.AI)
+                {
+                    countOpponent++;
+                }
+            }
+
+            if (countPlayer == 0)
+            {
+                // ganhou o oponente
+                return Victory.Opponent;
+            }
+
+            else if (countOpponent == 0)
+            {
+                // ganhou o jogador
+                return Victory.Player;
+
+            } 
+            else {
+
+                return Victory.None;
             }
         }
 
