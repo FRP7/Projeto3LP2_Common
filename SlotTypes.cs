@@ -5,7 +5,7 @@ namespace Common
     public enum SlotTypes
     {
         Player,
-        AI,
+        Opponent,
         None,
     }
 }

@@ -97,7 +97,7 @@ namespace Common
                 if (AllSlots[0].Item1 == SlotTypes.Player)
                 {
                     // guardar as slots legais
-                    if (AllSlots[5].Item1 == SlotTypes.AI
+                    if (AllSlots[5].Item1 == SlotTypes.Opponent
                         && AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
@@ -108,7 +108,7 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[5]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(5, AllSlots[5].Item1, AllSlots[5].Item2, false));
                     }
-                    if (AllSlots[1].Item1 == SlotTypes.AI
+                    if (AllSlots[1].Item1 == SlotTypes.Opponent
                         && AllSlots[2].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[2]);
@@ -133,7 +133,7 @@ namespace Common
                 if (AllSlots[1].Item1 == SlotTypes.Player)
                 {
                     // guardar as slots legais
-                    if (AllSlots[4].Item1 == SlotTypes.AI
+                    if (AllSlots[4].Item1 == SlotTypes.Opponent
                         && AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
@@ -168,7 +168,7 @@ namespace Common
                 if (AllSlots[2].Item1 == SlotTypes.Player)
                 {
                     // guardar as slots legais
-                    if (AllSlots[1].Item1 == SlotTypes.AI
+                    if (AllSlots[1].Item1 == SlotTypes.Opponent
                         && AllSlots[0].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[0]);
@@ -179,7 +179,7 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[1]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(1, AllSlots[1].Item1, AllSlots[1].Item2, false));
                     }
-                    if (AllSlots[3].Item1 == SlotTypes.AI &&
+                    if (AllSlots[3].Item1 == SlotTypes.Opponent &&
                         AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
@@ -205,7 +205,7 @@ namespace Common
                 if (AllSlots[3].Item1 == SlotTypes.Player)
                 {
                     // guardar as slots legais
-                    if (AllSlots[6].Item1 == SlotTypes.AI
+                    if (AllSlots[6].Item1 == SlotTypes.Opponent
                         && AllSlots[9].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[9]);
@@ -216,7 +216,7 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[2]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(2, AllSlots[2].Item1, AllSlots[2].Item2, false));
                     }
-                    if (AllSlots[4].Item1 == SlotTypes.AI &&
+                    if (AllSlots[4].Item1 == SlotTypes.Opponent &&
                         AllSlots[5].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[5]);
@@ -247,7 +247,7 @@ namespace Common
                 if (AllSlots[4].Item1 == SlotTypes.Player)
                 {
                     // guardar as slots legais
-                    if (AllSlots[6].Item1 == SlotTypes.AI
+                    if (AllSlots[6].Item1 == SlotTypes.Opponent
                         && AllSlots[8].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[8]);
@@ -288,7 +288,7 @@ namespace Common
                 if (AllSlots[5].Item1 == SlotTypes.Player)
                 {
                     // guardar as slots legais
-                    if (AllSlots[6].Item1 == SlotTypes.AI
+                    if (AllSlots[6].Item1 == SlotTypes.Opponent
                         && AllSlots[7].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[7]);
@@ -299,7 +299,7 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[6]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(6, AllSlots[6].Item1, AllSlots[6].Item2, false));
                     }
-                    if (AllSlots[4].Item1 == SlotTypes.AI
+                    if (AllSlots[4].Item1 == SlotTypes.Opponent
                        && AllSlots[3].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[3]);
@@ -332,7 +332,7 @@ namespace Common
                 if (AllSlots[6].Item1 == SlotTypes.Player)
                 {
                     // guardar as slots legais
-                    if (AllSlots[5].Item1 == SlotTypes.AI
+                    if (AllSlots[5].Item1 == SlotTypes.Opponent
                         && AllSlots[0].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[0]);
@@ -343,7 +343,7 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[5]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(5, AllSlots[5].Item1, AllSlots[5].Item2, false));
                     }
-                    if (AllSlots[4].Item1 == SlotTypes.AI
+                    if (AllSlots[4].Item1 == SlotTypes.Opponent
                        && AllSlots[1].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[1]);
@@ -357,7 +357,7 @@ namespace Common
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(4, AllSlots[4].Item1, AllSlots[4].Item2, false));
                     }
 
-                    if (AllSlots[3].Item1 == SlotTypes.AI
+                    if (AllSlots[3].Item1 == SlotTypes.Opponent
                        && AllSlots[2].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[2]);
@@ -370,7 +370,7 @@ namespace Common
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(3, AllSlots[3].Item1, AllSlots[3].Item2, false));
                     }
 
-                    if (AllSlots[7].Item1 == SlotTypes.AI
+                    if (AllSlots[7].Item1 == SlotTypes.Opponent
                        && AllSlots[12].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[12]);
@@ -383,7 +383,7 @@ namespace Common
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(7, AllSlots[7].Item1, AllSlots[7].Item2, false));
                     }
 
-                    if (AllSlots[8].Item1 == SlotTypes.AI
+                    if (AllSlots[8].Item1 == SlotTypes.Opponent
                        && AllSlots[11].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[11]);
@@ -396,7 +396,7 @@ namespace Common
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(8, AllSlots[8].Item1, AllSlots[8].Item2, false));
                     }
 
-                    if (AllSlots[9].Item1 == SlotTypes.AI
+                    if (AllSlots[9].Item1 == SlotTypes.Opponent
                        && AllSlots[10].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[10]);
@@ -438,13 +438,13 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[6]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(6, AllSlots[6].Item1, AllSlots[6].Item2, false));
                     }
-                    if (AllSlots[6].Item1 == SlotTypes.AI
+                    if (AllSlots[6].Item1 == SlotTypes.Opponent
                         && AllSlots[5].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[5]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(5, AllSlots[5].Item1, AllSlots[5].Item2, true));
                     }
-                    if (AllSlots[8].Item1 == SlotTypes.AI
+                    if (AllSlots[8].Item1 == SlotTypes.Opponent
                        && AllSlots[9].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[9]);
@@ -485,7 +485,7 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[6]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(6, AllSlots[6].Item1, AllSlots[6].Item2, false));
                     }
-                    if (AllSlots[6].Item1 == SlotTypes.AI
+                    if (AllSlots[6].Item1 == SlotTypes.Opponent
                        && AllSlots[4].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[4]);
@@ -521,13 +521,13 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[6]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(6, AllSlots[6].Item1, AllSlots[6].Item2, false));
                     }
-                    if (AllSlots[8].Item1 == SlotTypes.AI
+                    if (AllSlots[8].Item1 == SlotTypes.Opponent
                        && AllSlots[7].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[7]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(7, AllSlots[7].Item1, AllSlots[7].Item2, true));
                     }
-                    if (AllSlots[6].Item1 == SlotTypes.AI
+                    if (AllSlots[6].Item1 == SlotTypes.Opponent
                      && AllSlots[3].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[3]);
@@ -558,13 +558,13 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[11]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(11, AllSlots[11].Item1, AllSlots[11].Item2, false));
                     }
-                    if (AllSlots[11].Item1 == SlotTypes.AI
+                    if (AllSlots[11].Item1 == SlotTypes.Opponent
                        && AllSlots[12].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[12]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(12, AllSlots[12].Item1, AllSlots[12].Item2, true));
                     }
-                    if (AllSlots[9].Item1 == SlotTypes.AI
+                    if (AllSlots[9].Item1 == SlotTypes.Opponent
                      && AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
@@ -600,7 +600,7 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[11]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(11, AllSlots[8].Item1, AllSlots[11].Item2, false));
                     }
-                    if (AllSlots[8].Item1 == SlotTypes.AI
+                    if (AllSlots[8].Item1 == SlotTypes.Opponent
                        && AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
@@ -630,13 +630,13 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[11]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(11, AllSlots[11].Item1, AllSlots[11].Item2, false));
                     }
-                    if (AllSlots[7].Item1 == SlotTypes.AI
+                    if (AllSlots[7].Item1 == SlotTypes.Opponent
                        && AllSlots[6].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[6]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(6, AllSlots[6].Item1, AllSlots[6].Item2, true));
                     }
-                    if (AllSlots[11].Item1 == SlotTypes.AI
+                    if (AllSlots[11].Item1 == SlotTypes.Opponent
                      && AllSlots[10].Item1 == SlotTypes.None)
                     {
                         //PlayerLegalPlays.Add(AllSlots[10]);
@@ -721,7 +721,7 @@ namespace Common
             // verificar peça 0
             if (piece == 0)
             {
-                if (AllSlots[0].Item1 == SlotTypes.AI)
+                if (AllSlots[0].Item1 == SlotTypes.Opponent)
                 {
                     // guardar as slots legais
                     if (AllSlots[5].Item1 == SlotTypes.Player
@@ -757,7 +757,7 @@ namespace Common
             // verificar peça 1
             if (piece == 1)
             {
-                if (AllSlots[1].Item1 == SlotTypes.AI)
+                if (AllSlots[1].Item1 == SlotTypes.Opponent)
                 {
                     // guardar as slots legais
                     if (AllSlots[4].Item1 == SlotTypes.Player
@@ -792,7 +792,7 @@ namespace Common
             // verificar peça 2
             if (piece == 2)
             {
-                if (AllSlots[2].Item1 == SlotTypes.AI)
+                if (AllSlots[2].Item1 == SlotTypes.Opponent)
                 {
                     // guardar as slots legais
                     if (AllSlots[1].Item1 == SlotTypes.Player
@@ -829,7 +829,7 @@ namespace Common
             // verificar peça 3
             if (piece == 3)
             {
-                if (AllSlots[3].Item1 == SlotTypes.AI)
+                if (AllSlots[3].Item1 == SlotTypes.Opponent)
                 {
                     // guardar as slots legais
                     if (AllSlots[6].Item1 == SlotTypes.Player
@@ -871,7 +871,7 @@ namespace Common
             // verificar peça 4
             if (piece == 4)
             {
-                if (AllSlots[4].Item1 == SlotTypes.AI)
+                if (AllSlots[4].Item1 == SlotTypes.Opponent)
                 {
                     // guardar as slots legais
                     if (AllSlots[6].Item1 == SlotTypes.Player
@@ -912,7 +912,7 @@ namespace Common
             // verificar peça 5
             if (piece == 5)
             {
-                if (AllSlots[5].Item1 == SlotTypes.AI)
+                if (AllSlots[5].Item1 == SlotTypes.Opponent)
                 {
                     // guardar as slots legais
                     if (AllSlots[6].Item1 == SlotTypes.Player
@@ -954,7 +954,7 @@ namespace Common
             // verificar a peça 6
             if (piece == 6)
             {
-                if (AllSlots[6].Item1 == SlotTypes.AI)
+                if (AllSlots[6].Item1 == SlotTypes.Opponent)
                 {
                     // guardar as slots legais
                     if (AllSlots[5].Item1 == SlotTypes.Player
@@ -1045,7 +1045,7 @@ namespace Common
             // verificar a peça 7
             if (piece == 7)
             {
-                if (AllSlots[7].Item1 == SlotTypes.AI)
+                if (AllSlots[7].Item1 == SlotTypes.Opponent)
                 {
                     // guardar as slots legais
                     if (AllSlots[12].Item1 == SlotTypes.None)
@@ -1087,7 +1087,7 @@ namespace Common
             // verificar a peça 8
             if (piece == 8)
             {
-                if (AllSlots[8].Item1 == SlotTypes.AI)
+                if (AllSlots[8].Item1 == SlotTypes.Opponent)
                 {
                     // guardar as slots legais
                     if (AllSlots[9].Item1 == SlotTypes.None)
@@ -1128,7 +1128,7 @@ namespace Common
             // verificar a peça 9
             if (piece == 9)
             {
-                if (AllSlots[9].Item1 == SlotTypes.AI)
+                if (AllSlots[9].Item1 == SlotTypes.Opponent)
                 {
                     // guardar as slots legais
                     if (AllSlots[8].Item1 == SlotTypes.None)
@@ -1170,7 +1170,7 @@ namespace Common
             // verificar a peça 10
             if (piece == 10)
             {
-                if (AllSlots[10].Item1 == SlotTypes.AI)
+                if (AllSlots[10].Item1 == SlotTypes.Opponent)
                 {
                     // guardar as slots legais
                     if (AllSlots[9].Item1 == SlotTypes.None)
@@ -1207,7 +1207,7 @@ namespace Common
             // verificar a peça 11
             if (piece == 11)
             {
-                if (AllSlots[11].Item1 == SlotTypes.AI)
+                if (AllSlots[11].Item1 == SlotTypes.Opponent)
                 {
                     // guardar as slots legais
                     if (AllSlots[10].Item1 == SlotTypes.None)
@@ -1242,7 +1242,7 @@ namespace Common
             // verificar a peça 12
             if (piece == 12)
             {
-                if (AllSlots[12].Item1 == SlotTypes.AI)
+                if (AllSlots[12].Item1 == SlotTypes.Opponent)
                 {
                     // guardar as slots legais
                     if (AllSlots[11].Item1 == SlotTypes.None)
@@ -1292,11 +1292,11 @@ namespace Common
         {
             if (isPlayerWhite)
             {
-                AllSlots[slot] = Tuple.Create(SlotTypes.AI, SlotColors.White);
+                AllSlots[slot] = Tuple.Create(SlotTypes.Opponent, SlotColors.White);
             }
             else if (!isPlayerWhite)
             {
-                AllSlots[slot] = Tuple.Create(SlotTypes.AI, SlotColors.Black);
+                AllSlots[slot] = Tuple.Create(SlotTypes.Opponent, SlotColors.Black);
                 Debug.Log("Atualizar peças.");
             }
             // caso coma alguma peça (not sure se funciona ainda)
@@ -1431,7 +1431,7 @@ namespace Common
                 {
                     countPlayer++;
 
-                } else if(items.Item1 == SlotTypes.AI)
+                } else if(items.Item1 == SlotTypes.Opponent)
                 {
                     countOpponent++;
                 }
