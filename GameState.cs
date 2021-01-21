@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Random = System.Random; // testar
-using UnityEngine; // testar
-using URand = UnityEngine.Random; // testar
-
 namespace Common
 {
     public class GameState
     {
-        public Board board;
+        public SetBoard board;
 
         private bool isEaten;
 
@@ -63,11 +59,6 @@ namespace Common
             }
         }
 
-        public void Update()
-        {
-            board.Update();
-        }
-
         // TRUE: jogador  FALSE: AI
         private bool WhoStartsFirst()
         {
@@ -75,20 +66,18 @@ namespace Common
 
             if (random.Next(0, 2) == 1)
             {
-                Debug.Log("Jogador começa primeiro.");
+                // jogador começa primeiro
                 return true;
             }
             else
             {
-                Debug.Log("AI começa primeiro.");
+                // ai começa primeiro
                 return false;
             }
         }
 
         public bool CheckPlayerLegalPlays(int piece)
         {
-            Debug.Log("Verificar jogadas possíveis do jogador");
-
             bool isLegal = true;
 
             // verificar peça 0
@@ -195,7 +184,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 2 não é do jogador");
                 }
             }
 
@@ -237,7 +225,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 3 não é do jogador");
                 }
             }
 
@@ -278,7 +265,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 4 não é do jogador");
                 }
             }
 
@@ -320,7 +306,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 5 não é do jogador");
                 }
             }
 
@@ -413,7 +398,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 6 não é do jogador");
                 }
             }
 
@@ -455,7 +439,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 7 não é do jogador");
                 }
             }
 
@@ -496,7 +479,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 8 não é do jogador");
                 }
             }
 
@@ -538,7 +520,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 9 não é do jogador");
                 }
             }
 
@@ -575,7 +556,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 10 não é do jogador");
                 }
             }
 
@@ -610,7 +590,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 11 não é do jogador");
                 }
             }
 
@@ -647,15 +626,8 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 12 não é do jogador");
                 }
             }
-            else
-            {
-                Debug.Log("Nenhuma das jogadas é valida");
-            }
-
-            Debug.Log("Jogada legal");
 
             // registar as jogadas.
             ServiceLocator.Register<List<Tuple<int, SlotTypes, SlotColors, bool>>>(PlayerLegalPlays);
@@ -678,12 +650,7 @@ namespace Common
                     {
                         isEaten = true;
                     }
-                    Debug.Log("A jogada é legal");
-                }
-                else
-                {
-                    Debug.Log("A jogada é ilegal");
-                }            
+                }           
             }
             return isTrue;
         }
@@ -697,7 +664,6 @@ namespace Common
             else if (!isPlayerWhite)
             {
                 AllSlots[slot] = Tuple.Create(SlotTypes.Player, SlotColors.Black);
-                Debug.Log("Atualizar peças.");
             }
             // caso coma alguma peça (not sure se funciona ainda)
             if(isEaten)
@@ -714,8 +680,6 @@ namespace Common
 
         public bool CheckOpponentLegalPlays(int piece)
         {
-            Debug.Log("Verificar jogadas possíveis do jogador");
-
             bool isLegal = true;
 
             // verificar peça 0
@@ -822,7 +786,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 2 não é do jogador");
                 }
             }
 
@@ -864,7 +827,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 3 não é do jogador");
                 }
             }
 
@@ -905,7 +867,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 4 não é do jogador");
                 }
             }
 
@@ -947,7 +908,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 5 não é do jogador");
                 }
             }
 
@@ -1038,7 +998,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 6 não é do jogador");
                 }
             }
 
@@ -1080,7 +1039,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 7 não é do jogador");
                 }
             }
 
@@ -1121,7 +1079,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 8 não é do jogador");
                 }
             }
 
@@ -1163,7 +1120,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 9 não é do jogador");
                 }
             }
 
@@ -1200,7 +1156,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 10 não é do jogador");
                 }
             }
 
@@ -1235,7 +1190,6 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 11 não é do jogador");
                 }
             }
 
@@ -1272,15 +1226,8 @@ namespace Common
                 else // a peça não é do jogador
                 {
                     isLegal = false;
-                    Debug.Log("A peça 12 não é do jogador");
                 }
             }
-            else
-            {
-                Debug.Log("Nenhuma das jogadas é valida");
-            }
-
-            Debug.Log("Jogada legal");
 
             // registar as jogadas.
             ServiceLocator.Register<List<Tuple<int, SlotTypes, SlotColors, bool>>>(PlayerLegalPlays);
@@ -1297,7 +1244,6 @@ namespace Common
             else if (!isPlayerWhite)
             {
                 AllSlots[slot] = Tuple.Create(SlotTypes.Opponent, SlotColors.Black);
-                Debug.Log("Atualizar peças.");
             }
             // caso coma alguma peça (not sure se funciona ainda)
             if (isEaten)
@@ -1457,7 +1403,7 @@ namespace Common
 
         public GameState()
         {
-            board = new Board();
+            board = new SetBoard();
             PlayerLegalPlays = new List<Tuple<int, SlotTypes, SlotColors, bool>>();
             AILegalPlays = new List<Tuple<int, int, SlotTypes, SlotColors, bool>>();
         }

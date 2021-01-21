@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine; // testar
 
 namespace Common
 {
-    public class Board
+    public class SetBoard
     {
         public SlotColors PlayerType { get; set; }
 
@@ -13,15 +12,6 @@ namespace Common
         public void Start()
         {
             SetColor();
-        }
-
-        public void Update()
-        {
-            Debug.Log("Tabuleiro atualizado.");
-        }
-
-        public void UpdateColors()
-        {
         }
 
         private void SetColor()
@@ -67,7 +57,7 @@ namespace Common
             ServiceLocator.Register<List<Tuple<SlotTypes, SlotColors>>>(AllSlots);
         }
 
-        public Board()
+        public SetBoard()
         {
             AllSlots = new List<Tuple<SlotTypes, SlotColors>>();
         }
