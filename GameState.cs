@@ -1221,6 +1221,11 @@ namespace Common
                         //PlayerLegalPlays.Add(AllSlots[10]);
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(10, AllSlots[10].Item1, AllSlots[10].Item2, true));
                     }
+					   if (AllSlots[11].Item1 == SlotTypes.None)
+                    {
+                        //PlayerLegalPlays.Add(AllSlots[11]);
+                        PlayerLegalPlays.Add(new Tuple<int, SlotTypes, SlotColors, bool>(11, AllSlots[11].Item1, AllSlots[11].Item2, false));
+                    }
                     isLegal = true;
                 }
                 else // a peça não é do jogador
