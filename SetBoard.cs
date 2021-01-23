@@ -43,16 +43,19 @@ namespace Common
                 // Colocar as peças do jogador .
                 for (int i = 0; i < 6; i++)
                 {
-                    AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.Player, SlotColors.Black));
+                    AllSlots.Add(new Tuple<SlotTypes, SlotColors>
+                        (SlotTypes.Player, SlotColors.Black));
                 }
 
                 // Colocar as peças vazias cizentas.
-                AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.None, SlotColors.Grey));
+                AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.None,
+                    SlotColors.Grey));
 
                 // Colocar as peças da ai .
                 for (int i = 7; i < 13; i++)
                 {
-                    AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.Opponent, SlotColors.White));
+                    AllSlots.Add(new Tuple<SlotTypes, SlotColors>
+                        (SlotTypes.Opponent, SlotColors.White));
                 }
 
             }
@@ -61,20 +64,21 @@ namespace Common
                 // Colocar as peças do jogador .
                 for (int i = 0; i < 6; i++)
                 {
-                    AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.Player, SlotColors.White));
+                    AllSlots.Add(new Tuple<SlotTypes, SlotColors>
+                        (SlotTypes.Player, SlotColors.White));
                 }
 
                 // Colocar as peças vazias cizentas.
-                AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.None, SlotColors.Grey));
+                AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.None,
+                    SlotColors.Grey));
 
                 // Colocar as peças da ai .
                 for (int i = 7; i < 13; i++)
                 {
-                    AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.Opponent, SlotColors.Black));
+                    AllSlots.Add(new Tuple<SlotTypes, SlotColors>
+                        (SlotTypes.Opponent, SlotColors.Black));
                 }
-            }
-         
-            //ServiceLocator.Register<List<Tuple<SlotTypes, SlotColors>>>(AllSlots);
+            }       
 
             // Register the GameData slot.
             ServiceLocator.Register<GameData>(gameData);

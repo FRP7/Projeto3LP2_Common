@@ -22,9 +22,10 @@ namespace Common
         /// <summary>
         /// List of all current possible plays. 
         /// </summary>
-        public List<Tuple<int, SlotTypes, SlotColors, bool>> PlayerLegalPlays { get; set; }
-
-        //public List<Tuple<int, int, SlotTypes, SlotColors, bool>> AILegalPlays { get; set; }
+        public List<Tuple<int, SlotTypes, SlotColors, bool>> PlayerLegalPlays {
+            get;
+            set; 
+        }
 
         /// <summary>
         /// Initialize the properties.
@@ -32,8 +33,8 @@ namespace Common
         public GameData()
         {
             AllSlots = new List<Tuple<SlotTypes, SlotColors>>();
-            PlayerLegalPlays = new List<Tuple<int, SlotTypes, SlotColors, bool>>();
-            //AILegalPlays = new List<Tuple<int, int, SlotTypes, SlotColors, bool>>();
+            PlayerLegalPlays = new List<Tuple<int, SlotTypes,
+                SlotColors, bool>>();
         }
     }
 }

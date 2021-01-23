@@ -10,7 +10,8 @@ namespace Common
     public static class ServiceLocator
     {
         // Dictionary of services.
-        private static readonly IDictionary<Type, object> services = new Dictionary<Type, object>();
+        private static readonly IDictionary<Type, object> services =
+            new Dictionary<Type, object>();
 
         /// <summary>
         /// Method to register service.
