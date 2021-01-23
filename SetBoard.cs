@@ -9,6 +9,8 @@ namespace Common
 
         public List<Tuple<SlotTypes, SlotColors>> AllSlots { get; set; }
 
+        private GameData gameData;
+
         public void Start()
         {
             SetColor();
@@ -55,11 +57,17 @@ namespace Common
 
             // registar
             ServiceLocator.Register<List<Tuple<SlotTypes, SlotColors>>>(AllSlots);
+
+            ServiceLocator.Register<GameData>(gameData);
+
+            ServiceLocator.GetService<GameData>().AllSlots = AllSlots;
+            ServiceLocator.GetService<GameData>().PlayerType = PlayerType;
         }
 
         public SetBoard()
         {
             AllSlots = new List<Tuple<SlotTypes, SlotColors>>();
+            gameData = new GameData();
         }
     }
 }

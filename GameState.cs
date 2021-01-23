@@ -20,9 +20,9 @@ namespace Common
         public List<Tuple<SlotTypes, SlotColors>> AllSlots
         {
             //get => board.AllSlots;
-            get => ServiceLocator.GetService<List<Tuple<SlotTypes, SlotColors>>>();
+            get => ServiceLocator.GetService<GameData>().AllSlots;
             //set => board.AllSlots = value;
-            set => ServiceLocator.GetService<List<Tuple<SlotTypes, SlotColors>>>();
+            set => ServiceLocator.GetService<GameData>().AllSlots = value;
         }
 
         // Coleção de jogadas possíveis para o jogador.
@@ -630,7 +630,8 @@ namespace Common
             }
 
             // registar as jogadas.
-            ServiceLocator.Register<List<Tuple<int, SlotTypes, SlotColors, bool>>>(PlayerLegalPlays);
+            //ServiceLocator.Register<List<Tuple<int, SlotTypes, SlotColors, bool>>>(PlayerLegalPlays);
+            ServiceLocator.GetService<GameData>().PlayerLegalPlays = PlayerLegalPlays;
 
             return isLegal;
         }
@@ -1235,7 +1236,9 @@ namespace Common
             }
 
             // registar as jogadas.
-            ServiceLocator.Register<List<Tuple<int, SlotTypes, SlotColors, bool>>>(PlayerLegalPlays);
+            //ServiceLocator.Register<List<Tuple<int, SlotTypes, SlotColors, bool>>>(PlayerLegalPlays);
+
+            ServiceLocator.GetService<GameData>().PlayerLegalPlays = PlayerLegalPlays;
 
             return isLegal;
         }
