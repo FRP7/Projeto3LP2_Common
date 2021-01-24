@@ -1289,13 +1289,13 @@ namespace Common
                     if (AllSlots[12].Item1 == SlotTypes.None)
                     {
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, 
-                            SlotColors, bool>(12, AllSlots[11].Item1, 
+                            SlotColors, bool>(12, AllSlots[12].Item1, 
                             AllSlots[11].Item2, false));
                     }
                     if (AllSlots[8].Item1 == SlotTypes.None)
                     {
                         PlayerLegalPlays.Add(new Tuple<int, SlotTypes, 
-                            SlotColors, bool>(8, AllSlots[11].Item1, 
+                            SlotColors, bool>(8, AllSlots[8].Item1, 
                             AllSlots[11].Item2, false));
                     }
                     if (AllSlots[8].Item1 == SlotTypes.Player
