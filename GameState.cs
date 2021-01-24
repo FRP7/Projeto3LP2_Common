@@ -1402,6 +1402,10 @@ namespace Common
             {
                 AllSlots[5] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
             }
+            if (piece == 0 && slot == 2)
+            {
+                AllSlots[1] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
+            }
             else if (piece == 1 && slot == 6)
             {
                 AllSlots[4] = Tuple.Create(SlotTypes.None, SlotColors.Grey);
