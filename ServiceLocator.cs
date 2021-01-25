@@ -10,7 +10,7 @@ namespace Common
     public static class ServiceLocator
     {
         // Dictionary of services.
-        private static readonly IDictionary<Type, object> services =
+        private static readonly IDictionary<Type, object> Services =
             new Dictionary<Type, object>();
 
         /// <summary>
@@ -20,17 +20,17 @@ namespace Common
         /// <param name="serviceInstance"> The service instance.</param>
         public static void Register<T>(object serviceInstance)
         {
-            services[typeof(T)] = serviceInstance;
+            Services[typeof(T)] = serviceInstance;
         }
 
         /// <summary>
         /// Method to access service.
         /// </summary>
         /// <typeparam name="T"> Service type.</typeparam>
-        /// <returns></returns>
+        /// <returns> Returns service.</returns>
         public static T GetService<T>()
         {
-            return (T)services[typeof(T)];
+            return (T)Services[typeof(T)];
         }
     }
 }

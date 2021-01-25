@@ -9,22 +9,22 @@ namespace Common
     public class GameData
     {
         /// <summary>
-        /// Gets and sets the player's color.
+        /// Gets or sets the player's color.
         /// </summary>
         public SlotColors PlayerType { get; set; }
 
         /// <summary>
-        /// Gets and sets all the slots in the board (whether are occupied by 
+        /// Gets or sets all the slots in the board (whether are occupied by
         /// the player or not).
         /// </summary>
         public List<Tuple<SlotTypes, SlotColors>> AllSlots { get; set; }
 
         /// <summary>
-        /// List of all current possible plays. 
+        /// Gets or sets of all current possible plays.
         /// </summary>
         public List<Tuple<int, SlotTypes, SlotColors, bool>> PlayerLegalPlays {
             get;
-            set; 
+            set;
         }
 
         /// <summary>
