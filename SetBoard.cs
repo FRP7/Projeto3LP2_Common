@@ -9,12 +9,12 @@ namespace Common
     public class SetBoard
     {
         /// <summary>
-        /// Gets and sets the player's color.
+        /// Gets or sets the player's color.
         /// </summary>
         public SlotColors PlayerType { get; set; }
 
         /// <summary>
-        /// Gets and sets the list of all slots in the board (whether are
+        /// Gets or sets the list of all slots in the board (whether are
         /// occupied by the player or not).
         /// </summary>
         public List<Tuple<SlotTypes, SlotColors>> AllSlots { get; set; }
@@ -22,7 +22,7 @@ namespace Common
         /// <summary>
         /// Access the GameData class.
         /// </summary>
-        private GameData gameData;
+        private readonly GameData gameData;
 
         /// <summary>
         /// To be called in the first frame of the game (like Unity).
@@ -37,18 +37,18 @@ namespace Common
         /// </summary>
         private void SetColor()
         {
-
             if (PlayerType == SlotColors.Black)
             {
-                // Colocar as peças do jogador .
+                // Put the player's pieces.
                 for (int i = 0; i < 6; i++)
                 {
                     AllSlots.Add(new Tuple<SlotTypes, SlotColors>
                         (SlotTypes.Player, SlotColors.Black));
                 }
 
-                // Colocar as peças vazias cizentas.
-                AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.None,
+                // Put the grey pieces.
+                AllSlots.Add(new Tuple<SlotTypes, SlotColors>(
+                    SlotTypes.None,
                     SlotColors.Grey));
 
                 // Colocar as peças da ai .
@@ -57,7 +57,6 @@ namespace Common
                     AllSlots.Add(new Tuple<SlotTypes, SlotColors>
                         (SlotTypes.Opponent, SlotColors.White));
                 }
-
             }
             else if (PlayerType == SlotColors.White)
             {
@@ -69,7 +68,8 @@ namespace Common
                 }
 
                 // Colocar as peças vazias cizentas.
-                AllSlots.Add(new Tuple<SlotTypes, SlotColors>(SlotTypes.None,
+                AllSlots.Add(new Tuple<SlotTypes, SlotColors>(
+                    SlotTypes.None,
                     SlotColors.Grey));
 
                 // Colocar as peças da ai .
@@ -78,7 +78,7 @@ namespace Common
                     AllSlots.Add(new Tuple<SlotTypes, SlotColors>
                         (SlotTypes.Opponent, SlotColors.Black));
                 }
-            }       
+            }
 
             // Register the GameData slot.
             ServiceLocator.Register<GameData>(gameData);
